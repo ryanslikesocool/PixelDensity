@@ -1,16 +1,16 @@
-# HapticsKit
-Quick access to iOS haptics functions for Unity.
+# PixelDensity
+Quick access to iOS screen pixel density (@1x, @2x, @3x) for Unity.
 
 ## Requirements
 - A recent version of Unity
-- An iPhone 7 or later running iOS 10 or later
+- An iOS device
 
 ## Installation
 
 **Recommended Installation**\
 Add via the Unity Package Manager\
 "Add package from git URL..."\
-https://github.com/ryanslikesocool/HapticsKit.git \
+https://github.com/ryanslikesocool/PixelDensity.git \
 Add
 
 Not-so Recommended Installation\
@@ -19,13 +19,11 @@ Open with the desired Unity project\
 Import into the Plugins folder
 
 ## Usage
-Import HapticsKit into a C# script with `using HapticsKit;`\
-Call one of the methods in `HapticsController`.\
-These methods act as a C# wrapper around the Obj-C source.
+Use the `PixelDensity.Scale` accessor anywhere in your code to get an iOS device's [scale](https://developer.apple.com/documentation/uikit/uiscreen/1617836-scale) as an `int`.  A non-iOS device will return `1`.
 
 ```cs
-HapticsController.NotificationFeedback(NotificationType.Success);
-HapticsController.ImpactFeedback(ImpactType.Light);
-HapticsController.SelectionFeedback();
-//etc...
+int scale = PixelDensity.Scale;
+// on an older iPhone/iPad display or any non-iOS display -> scale == 1
+// on a "retina" display -> scale == 2
+// on a "super retina" display -> scale == 3
 ```
