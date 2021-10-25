@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 
 public static class PixelDensity
 {
-#if UNITY_IOS && !UNITY_EDITOR
+#if UNITY_EDITOR_OSX || UNITY_STANDALONE_OSX || UNITY_IOS
     [DllImport("__Internal")]
     private static extern int getPixelDensity();
 

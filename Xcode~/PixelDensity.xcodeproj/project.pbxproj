@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF10DF062726C5FC008ED4F6 /* PixelDensity.h in Headers */ = {isa = PBXBuildFile; fileRef = AF10DF052726C5FC008ED4F6 /* PixelDensity.h */; };
+		AF10DF082726C5FC008ED4F6 /* PixelDensity.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF10DF072726C5FC008ED4F6 /* PixelDensity.mm */; };
+		AF10DF0D2726C79C008ED4F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF10DF0C2726C79C008ED4F6 /* Foundation.framework */; };
+		AF10DF0F2726C7A2008ED4F6 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF10DF0E2726C7A2008ED4F6 /* AppKit.framework */; };
 		AFDBEE0A2712AF8B00EE60C2 /* PixelDensity.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF0ED3052712A766001BA308 /* PixelDensity.mm */; };
 		AFDBEE0D2712AFA000EE60C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFDBEE0C2712AFA000EE60C2 /* UIKit.framework */; };
 		AFDBEE0F2712AFA600EE60C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFDBEE0E2712AFA600EE60C2 /* Foundation.framework */; };
@@ -26,13 +30,27 @@
 
 /* Begin PBXFileReference section */
 		AF0ED3052712A766001BA308 /* PixelDensity.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PixelDensity.mm; sourceTree = "<group>"; };
-		AFDBEE002712AEBD00EE60C2 /* libPixelDensity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPixelDensity.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF10DF032726C5FC008ED4F6 /* libPixelDensity macOS.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "libPixelDensity macOS.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF10DF052726C5FC008ED4F6 /* PixelDensity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixelDensity.h; sourceTree = "<group>"; };
+		AF10DF072726C5FC008ED4F6 /* PixelDensity.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PixelDensity.mm; sourceTree = "<group>"; };
+		AF10DF0C2726C79C008ED4F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		AF10DF0E2726C7A2008ED4F6 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
+		AFDBEE002712AEBD00EE60C2 /* libPixelDensity iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPixelDensity iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFDBEE092712AEFC00EE60C2 /* PixelDensity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixelDensity.h; sourceTree = "<group>"; };
 		AFDBEE0C2712AFA000EE60C2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/iOSSupport/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		AFDBEE0E2712AFA600EE60C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AF10DF012726C5FC008ED4F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF10DF0F2726C7A2008ED4F6 /* AppKit.framework in Frameworks */,
+				AF10DF0D2726C79C008ED4F6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AFDBEDFD2712AEBD00EE60C2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -48,7 +66,8 @@
 		AF0ED2F12712A750001BA308 = {
 			isa = PBXGroup;
 			children = (
-				AFDBEE012712AEBD00EE60C2 /* PixelDensity */,
+				AFDBEE012712AEBD00EE60C2 /* PixelDensity-iOS */,
+				AF10DF042726C5FC008ED4F6 /* PixelDensity macOS */,
 				AF0ED2FC2712A750001BA308 /* Products */,
 				AFDBEE0B2712AFA000EE60C2 /* Frameworks */,
 			);
@@ -57,24 +76,36 @@
 		AF0ED2FC2712A750001BA308 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AFDBEE002712AEBD00EE60C2 /* libPixelDensity.a */,
+				AFDBEE002712AEBD00EE60C2 /* libPixelDensity iOS.a */,
+				AF10DF032726C5FC008ED4F6 /* libPixelDensity macOS.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AFDBEE012712AEBD00EE60C2 /* PixelDensity */ = {
+		AF10DF042726C5FC008ED4F6 /* PixelDensity macOS */ = {
+			isa = PBXGroup;
+			children = (
+				AF10DF052726C5FC008ED4F6 /* PixelDensity.h */,
+				AF10DF072726C5FC008ED4F6 /* PixelDensity.mm */,
+			);
+			path = "PixelDensity macOS";
+			sourceTree = "<group>";
+		};
+		AFDBEE012712AEBD00EE60C2 /* PixelDensity-iOS */ = {
 			isa = PBXGroup;
 			children = (
 				AF0ED3052712A766001BA308 /* PixelDensity.mm */,
 				AFDBEE092712AEFC00EE60C2 /* PixelDensity.h */,
 			);
-			path = PixelDensity;
+			path = "PixelDensity-iOS";
 			sourceTree = "<group>";
 		};
 		AFDBEE0B2712AFA000EE60C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AF10DF0E2726C7A2008ED4F6 /* AppKit.framework */,
 				AFDBEE0E2712AFA600EE60C2 /* Foundation.framework */,
+				AF10DF0C2726C79C008ED4F6 /* Foundation.framework */,
 				AFDBEE0C2712AFA000EE60C2 /* UIKit.framework */,
 			);
 			name = Frameworks;
@@ -82,10 +113,38 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		AF10DEFF2726C5FC008ED4F6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF10DF062726C5FC008ED4F6 /* PixelDensity.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		AFDBEDFF2712AEBD00EE60C2 /* PixelDensity */ = {
+		AF10DF022726C5FC008ED4F6 /* PixelDensity macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AFDBEE062712AEBD00EE60C2 /* Build configuration list for PBXNativeTarget "PixelDensity" */;
+			buildConfigurationList = AF10DF0B2726C5FC008ED4F6 /* Build configuration list for PBXNativeTarget "PixelDensity macOS" */;
+			buildPhases = (
+				AF10DEFF2726C5FC008ED4F6 /* Headers */,
+				AF10DF002726C5FC008ED4F6 /* Sources */,
+				AF10DF012726C5FC008ED4F6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PixelDensity macOS";
+			productName = "PixelDensity macOS";
+			productReference = AF10DF032726C5FC008ED4F6 /* libPixelDensity macOS.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		AFDBEDFF2712AEBD00EE60C2 /* PixelDensity iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFDBEE062712AEBD00EE60C2 /* Build configuration list for PBXNativeTarget "PixelDensity iOS" */;
 			buildPhases = (
 				AFDBEDFC2712AEBD00EE60C2 /* Sources */,
 				AFDBEDFD2712AEBD00EE60C2 /* Frameworks */,
@@ -95,9 +154,9 @@
 			);
 			dependencies = (
 			);
-			name = PixelDensity;
+			name = "PixelDensity iOS";
 			productName = HapticsKit;
-			productReference = AFDBEE002712AEBD00EE60C2 /* libPixelDensity.a */;
+			productReference = AFDBEE002712AEBD00EE60C2 /* libPixelDensity iOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -109,6 +168,9 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					AF10DF022726C5FC008ED4F6 = {
+						CreatedOnToolsVersion = 13.1;
+					};
 					AFDBEDFF2712AEBD00EE60C2 = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -127,12 +189,21 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AFDBEDFF2712AEBD00EE60C2 /* PixelDensity */,
+				AFDBEDFF2712AEBD00EE60C2 /* PixelDensity iOS */,
+				AF10DF022726C5FC008ED4F6 /* PixelDensity macOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AF10DF002726C5FC008ED4F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF10DF082726C5FC008ED4F6 /* PixelDensity.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AFDBEDFC2712AEBD00EE60C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -196,7 +267,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -252,13 +324,44 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AF10DF092726C5FC008ED4F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 838RGQ32CA;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AF10DF0A2726C5FC008ED4F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 838RGQ32CA;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -298,7 +401,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AFDBEE062712AEBD00EE60C2 /* Build configuration list for PBXNativeTarget "PixelDensity" */ = {
+		AF10DF0B2726C5FC008ED4F6 /* Build configuration list for PBXNativeTarget "PixelDensity macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF10DF092726C5FC008ED4F6 /* Debug */,
+				AF10DF0A2726C5FC008ED4F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFDBEE062712AEBD00EE60C2 /* Build configuration list for PBXNativeTarget "PixelDensity iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AFDBEE072712AEBD00EE60C2 /* Debug */,
